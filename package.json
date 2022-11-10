@@ -1,0 +1,31 @@
+{
+  "name": "dao-governance",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikbolshakov/DAO-Governance.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikbolshakov/DAO-Governance/issues"
+  },
+  "homepage": "https://github.com/mikbolshakov/DAO-Governance#readme",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.0",
+    "chai-ethers": "^0.0.1",
+    "ethers":"^5.7.2",
+    "hardhat": "^2.12.2",
+    "hardhat-deploy": "^0.11.20",
+    "hardhat-deploy-ethers": "^0.3.0-beta.13"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.8.0"
+  }
+}
