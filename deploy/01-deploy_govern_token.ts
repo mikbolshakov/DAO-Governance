@@ -13,20 +13,23 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   });
 
   await delegate(hre, governToken.address, deployer);
-}
+};
 
-const delegate = async(
+const delegate = async (
   hre: HardhatRuntimeEnvironment,
   governTokenAddr: string,
-  delegatedAccount: string) => {
-    const governToken = GovernToken__factory.connect(
-      governTokenAddr, 
-      hre.ethers.provider.getSigner(0)
-    );
+  delegatedAccount: string
+) => {
+  const governToken = GovernToken__factory.connect(
+    governTokenAddr,
+    hre.ethers.provider.getSigner(0)
+  );
 
-    const tx = await governToken.delegate(delegatedAccount);
-    await tx.wait();
-    console.log(`Checkpoints ${await governToken.numCheckpoints(delegatedAccount)}`);
-  }
+  const tx = await governToken.delegate(delegatedAccount);
+  await tx.wait();
+  console.log(
+    `Checkpoints ${await governToken.numCheckpoints(delegatedAccount)}`
+  );
+};
 
 export default func;

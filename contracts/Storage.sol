@@ -3,9 +3,9 @@ pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-// пример ск, которым будет управлять другй ск (и будет owner'ом) 
-// в нашем случае - владельцем будет Timelock.sol
-// здесь могут быть любые функции: выпуск токенов, для перевода и тд
+// an example of a contract that will be controlled by another contract (and will be the owner)
+// in our case, the owner will be Timelock.sol
+// any functions can be here: mint tokens, transfer, etc.
 contract Storage is Ownable {
     uint myVal;
 
